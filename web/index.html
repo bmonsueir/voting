@@ -1,0 +1,33 @@
+<head>
+  <title>voting</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  
+</head>
+
+<body>
+  {{> navbar}}
+  <h1>Welcome to Meteor!</h1>
+
+ 
+</body>
+
+<template name="navbar">
+  <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+  <div class="container">
+ 
+   
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/signup">Sign up</a></li>
+        <li ><a href="/login">Login</a></li>
+        <!--<li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li> -->>
+        <li><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ><a href="#" >Logout</a></li>
+      </ul>
+   
+  </div>
+</div>
+</template>
