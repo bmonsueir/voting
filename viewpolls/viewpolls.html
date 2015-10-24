@@ -1,0 +1,8 @@
+<template name = 'viewpolls'>
+    <h1>View Polls</h1>
+    <ul>
+    {{#each questions}}
+      <li><button class = 'delete'>&times;</button> {{this}} </li>  
+    {{/each}}
+    </ul>
+</template>

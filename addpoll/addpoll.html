@@ -1,0 +1,43 @@
+<template name = 'addpoll'>
+ <h1>Add Your Question</h1>
+
+<div class="container">
+  <div class="row">
+   
+    <div class="col-sm-12">
+     
+      <form >
+        <div class="form-group">
+            
+          <label>Question</label>
+          <input type="text"  name= 'question'  placeholder="Enter your question">
+        </div>
+        </form>
+        
+        <label>Choices</label>
+        <form class="new-choice" >
+        <input type="text" name = 'choice' placeholder="Enter another choice"><p>press enter to record another choice</p>
+        </form>
+        
+        
+       
+      
+          <div>
+             <h3>Choices</h3>
+             <ul>
+              {{#each choices}}
+                 <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+          {{#if currentUser}}
+          <button id="addapoll"  class='pull-left btn btn-info'>Submit</button>
+          {{else}}
+          <p>You need to sign in or sign up to add content</p>
+          {{/if}}
+          
+    </div>
+  </div>
+</div>
+
+</template>
