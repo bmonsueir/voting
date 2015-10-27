@@ -1,0 +1,15 @@
+.vote{
+    color: #FFFFFF;
+    background-color: #0000FF;
+    margin: 5px;
+    border-radius: 2px;
+}
+.li-list{
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 2px;
+   color: #FF0000;
+   border-color: #00FF00;
+   margin: 5px;
+    
+}

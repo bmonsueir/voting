@@ -1,4 +1,14 @@
 <template name = 'takepoll'>
     <h1>Take Poll</h1>
-    
+     {{#with polls}}
+     {{question}}
+     <ul>
+     {{#each choices}}
+     <li class = 'li-choice'> <button class = 'choose' id = {{@index}}>CHOOSE</button>{{this}}</li>
+     {{/each}}
+     </ul>
+     {{/with}}
+     <button class = 'addChoice'>ADD</button>
+     <input type="text" name = 'newchoice' placeholder="Enter another choice"><p>adding a new choice automatically adds your vote</p>
+
 </template>

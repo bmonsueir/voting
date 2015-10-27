@@ -1,0 +1,21 @@
+.choose{
+    color: #FF0000;
+    background-color: #00FF00;
+    margin: 15px;
+    border-radius: 20px;
+}
+.li-choice{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    color: #000000;
+    border-color: #FF0000;
+    margin: 20px;
+}
+
+.add-choice{
+    color: #0000FF;
+    background-color: #FF0000;
+    margin: 15px;
+    border-radius: 20px;
+}

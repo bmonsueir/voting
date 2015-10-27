@@ -1,4 +1,11 @@
 <template name = 'viewvote'>
     <h1>View Vote</h1>
-    
+     {{#with polls}}
+     <h3>{{question}}</h3>
+     {{/with}}
+   <div class = 'result'>
+     <canvas id="theResults" width="500" height="500" style="border:1px solid #000000;">
+    </canvas>
+  </div>
+    <button class = 'btn btn-danger' id = 'deleteRecord'>DELETE</button>
 </template>

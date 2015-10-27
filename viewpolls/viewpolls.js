@@ -1,27 +1,23 @@
 
 
 if (Meteor.isClient) {
-  
- var questions = [];
- var questionsDep = new Tracker.Dependency();
+  var poll = [];
   Template.viewpolls.helpers({
       questions: function () {
-        questionsDep.depend();
-        var poll = {};
-        poll = Polls.find().fetch();
-        for(var i in poll){
-        questions.push( poll[i].question);
-      }
-        console.log(questions);
-        return questions;
+       poll = Polls.find().fetch();
+        return  poll;
       }
     });
     
     Template.viewpolls.events({
-      'click .delete': function(){
-        
-        Polls.remove(this._id);
-        questionsDep.changed();
+      'click .vote': function(e){
+        var user = Meteor.userId();
+         poll = Polls.findOne({_id:this._id});
+        if($.inArray(user, poll.voters)> -1){
+          Router.go('viewvote',{_id: this._id});
+        } else{
+          Router.go('takepoll',{_id: this._id});
+        }
       }
       
     })

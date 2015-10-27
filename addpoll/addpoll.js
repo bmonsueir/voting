@@ -50,6 +50,9 @@ if (Meteor.isClient) {
           Router.go('home');
    }
    }
-     })
+     });
+     
+     
+   
 }
   

@@ -2,7 +2,7 @@
     <h1>View Polls</h1>
     <ul>
     {{#each questions}}
-      <li><button class = 'delete'>&times;</button> {{this}} </li>  
+      <li class = 'li-list'><button class = 'vote'>VOTE</button> {{this.question}} </li>  
     {{/each}}
     </ul>
 </template>
