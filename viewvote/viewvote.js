@@ -26,21 +26,27 @@ Template.viewvote.events({
       var ctx = canvas.getContext("2d");
       var n = poll.votes.length;
       var maxVotes = 0;
-      for(var i in poll.votes){
+      var i = 0;
+      var y = 450;
+      var m = 10;
+      var totalHeight = 500;
+      var totalWidth = 500;
+      for( i in poll.votes){
        if(maxVotes < poll.votes[i])
         maxVotes = poll.votes[i];
       }
-      var barWidth = (490-10*n)/n;
+      var barWidth = Math.floor((totalWidth - (n + 1) * m) / n);
       console.log(n,maxVotes, barWidth);
-      ctx.fillStyle = "#FF0000";
+      
       ctx.font = "20px Arial";
       for(i = 0; i < n; i++){
        var x = 10 + barWidth * i + 10 * i;
-       var barHeight = 400 * poll.votes[i]/maxVotes;
-       ctx.fillRect(x, 450, barWidth, barHeight);
-       ctx.fillText(poll.choices[i], x, 250);
+       var barHeight =Math.floor((totalHeight * poll.votes[i]/maxVotes) -5 * m);
+       ctx.fillStyle = "#FF0000";
+       ctx.fillRect(x, barHeight - y, barWidth, barHeight);
+       ctx.fillStyle = "#000000";
+       ctx.fillText(poll.choices[i], x, totalHeight - m, barWidth);
+       ctx.fillText(poll.votes[i], x + barWidth / 2, totalHeight / 2);
       }
-     
-     
    }
  }
