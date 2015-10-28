@@ -7,18 +7,12 @@
         {{#if currentUser}}
         <li ><a href="{{pathFor 'addpoll'}}">Add Poll</a></li>
         <li ><a href="{{pathFor 'viewpolls'}}" >View Polls</a></li>
-        {{/if}}
-      </ul>
-    
-      <ul class="nav navbar-nav navbar-right">
-        {{#if currentUser}}
         <li ><a href="/" class = 'logout'>Logout</a></li>
         {{else}}
         <li ><a href="/signup">Sign up</a></li>
         <li ><a href="/login">Login</a></li>
         {{/if}}
       </ul>
-   
   </div>
 </div>
 </template>

@@ -1,9 +1,9 @@
 <template name = 'viewvote'>
-    <h1>View Vote</h1>
+    <h1 class = "text-center">View Vote</h1>
      {{#with polls}}
-     <h3>{{question}}</h3>
+     <h3 class = "text-center">{{question}}</h3>
      {{/with}}
-   <div class = 'result'>
+   <div class = 'result text-center'>
      <canvas id="theResults" width="500" height="500" style="border:1px solid #000000;">
     </canvas>
   </div>

@@ -1,7 +1,7 @@
 <template name = 'takepoll'>
-    <h1>Take Poll</h1>
+    <h1 class = "text-center">Take Poll</h1>
      {{#with polls}}
-     {{question}}
+     <h3  class = "text-center">{{question}}</h3>
      <ul>
      {{#each choices}}
      <li class = 'li-choice'> <button class = 'choose' id = {{@index}}>CHOOSE</button>{{this}}</li>
@@ -9,6 +9,6 @@
      </ul>
      {{/with}}
      <button class = 'addChoice'>ADD</button>
-     <input type="text" name = 'newchoice' placeholder="Enter another choice"><p>adding a new choice automatically adds your vote</p>
+     <input type="text" name = 'newchoice' placeholder="Enter another choice"><p>Adding a new choice automatically adds your vote, too.</p>
 
 </template>
